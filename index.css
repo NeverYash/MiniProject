@@ -146,6 +146,8 @@ text-shadow: 9px 9px 10px #000000;
     justify-content: space-around;
     align-content: stretch;   
     padding-inline-start: 20px; 
+    position:absolute;
+    top:190px;
   
 }
 .single-img{
