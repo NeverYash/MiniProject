@@ -1,3 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Lexend Tera';
+    font-style: normal;
+    box-sizing: border-box;
+    align-items: center;
+}
+.humburger{
+    display: none;
+}
+header{
+    width: 100%;
+    height: 60px;
+    padding: 0 100px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav-bar ul{
+    display: flex;
+    
+}
+.nav-bar ul li a{
+    display: block;
+    color: black;
+    font-size: 20px;
+    padding: 10px 25px;
+    transition: 0.2s;
+    margin: 0 5px;
+    
+}
+.nav-bar ul li a:hover{
+    color: #fff;
+    background:greenyellow;
+}
+.nav-bar ul li a.active{
+    color: #fff;
+    background:greenyellow;
+}
+@media only screen and (max-width: 1320px){
+    header{
+        padding:50px;
+    }
+}
+@media only screen and (max-width: 1100px){
+    header{
+        padding:30px;
+    }
+}
+@media only screen and (max-width: 900px){
+    .humburger{
+        display: block;
+        cursor: pointer;
+        position: relative;
+        right: 140px;
+    }
+    .humburger .line{
+        width: 25px;
+        height: 3px;
+        background: black;
+        margin: 2px;
+        
+        position: sticky;
+        
+    
+        
+    }
+
+    .nav-bar{
+    height: 0px;
+    position: absolute;
+    top: 80px;
+    
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #ffffff;
+    transition: .2s;
+    overflow: hidden;
+
+
+    }
+    .nav-bar.active{
+        height: 450px;
+    }
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+        
+    }
+}
+
+
 .greenimg{
     position: absolute;
 width: 100%;
@@ -12,7 +121,7 @@ background: url(leaves-g45c75c55e_1920.jpg);
 width: 388px;
 height: 2px;
 left: calc(50% - 388px/2);
-top: -21px;
+top: 30px;
 
 font-family: 'Lexend Tera';
 font-style: normal;
@@ -25,45 +134,15 @@ color: #FFFF3F;
 
 text-shadow: 9px 9px 10px #000000;
 }
-.navbar{
-    position: relative;
-    top: 126px;
-    padding:-1;
-}
-.navbar ul{
-    list-style: none;
-    background:#ffffff;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-.navbar li{
-    display: inline-block;
-}
-.navbar a{
-    font-family: 'Lexend Tera';
-font-style: normal;
-font-weight: 400;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    width: 150px;
-    display: block;
-    padding: 15px 10px;
-    font-size: 17px;
-    text-transform: uppercase;
-    text-align: center;
-}
-.navbar a:hover{
-    background: #80B918;
-    ;
-}
-.rec1{
-    position: absolute;
-width: 100%;
-height: 729px;
-left: 0px;
-top: 185px;
 
+
+.rec1{
+    position: static;
+width: device-width;
+height: 730px;
+top: 185px;
+left: 0px;
+right:0px ;
 background: conic-gradient(from -14.38deg at 50% 49.93%, #A5FF00 -34.15deg, #FBFF14 194.06deg, #A5FF00 325.85deg, #FBFF14 554.06deg);
 }
 .img1{
@@ -77,16 +156,6 @@ background: conic-gradient(from -14.38deg at 50% 49.93%, #A5FF00 -34.15deg, #FBF
     filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
     border-radius: 20px;
 }
-.bg1{
-    position: absolute;
-    width: 383px;
-    height: 323px;
-    left: 136px;
-    top: 192px;
-    padding: 0;
-    background: url(—Pngtree—black gradient vertical gradient element_5441580.png);
-    border-radius: 20px;
-}
 .img2{
     position: absolute;
 width: 381px;
@@ -98,16 +167,7 @@ background: url(rosemary-plants-place-white-marble-floor_1150-35559.png);
 filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
 border-radius: 20px;
 }
-.bg2{
-    position: absolute;
-width: 381px;
-height: 348px;
-left: 537.25px;
-top: 167px;
 
-background: url(—Pngtree—black gradient vertical gradient element_5441580.png);
-border-radius: 20px;
-}
 .img3{
     position: absolute;
 width: 385px;
@@ -118,16 +178,6 @@ top: 258.03px;
 background: url(top-view-bay-leaves-with-pepper.jpg);
 filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
 border-radius: 20px;
-}
-.bg3{
-    position: absolute;
-    width: 385px;
-    height: 349px;
-    left: 935px;
-    top: 165px;
-    
-    background: url(—Pngtree—black gradient vertical gradient element_5441580.png);
-    border-radius: 20px;
 }
 .img4{
     position: absolute;
@@ -140,16 +190,7 @@ background: url(top-view-green-greenies-fresh-ripe-brown-green-salad-leaf_140725
 filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
 border-radius: 20px;
 }
-.bg4{
-    position: absolute;
-width: 383px;
-height: 348.79px;
-left: 137px;
-top: 453px;
 
-background: url(—Pngtree—black gradient vertical gradient element_5441580.png);
-border-radius: 20px;
-}
 .img5{
     position: absolute;
 width: 380.17px;
@@ -161,16 +202,7 @@ background: url(basil-hairy-basil-thyme-herbal-garden_7636-1954.png);
 filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
 border-radius: 20px;
 }
-.bg5{
-    position: absolute;
-    width: 381px;
-    height: 348.17px;
-    left: 537px;
-    top: 453px;
-    
-    background: url(—Pngtree—black gradient vertical gradient element_5441580.png);
-    border-radius: 20px;
-}
+
 .img6{
     position: absolute;
 width: 382.17px;
@@ -182,29 +214,7 @@ background: url(dried-saffron-spices-saffron-flower-wooden-plate-wooden-table-st
 filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
 border-radius: 20px;
 }
-.bg6{
-    position: absolute;
-width: 383px;
-height: 344.06px;
-left: 938px;
-top: 455px;
 
-background: url(—Pngtree—black gradient vertical gradient element_5441580.png);
-border-radius: 20px;
-}
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-end;
-}
-.flex-container > div {
-    background-color: #f1f1f1;
-    width: 100px;
-    margin: 10px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
-  }
 .b1{
     position: absolute;
 width: 263px;
