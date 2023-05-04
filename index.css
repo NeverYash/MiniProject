@@ -145,74 +145,12 @@ left: 0px;
 right:0px ;
 background: conic-gradient(from -14.38deg at 50% 49.93%, #A5FF00 -34.15deg, #FBFF14 194.06deg, #A5FF00 325.85deg, #FBFF14 554.06deg);
 }
-.img1{
-    position: absolute;
-    width: 381px;
-    height: 247px;
-    left: 130px;
-    top: 259px;
-    padding: 0;
-    background: url(mint-g83668f821_1920.jpg);
-    filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
-    border-radius: 20px;
-}
-.img2{
-    position: absolute;
-width: 381px;
-height: 247.26px;
-left: 530px;
-top: 257px;
-
-background: url(rosemary-plants-place-white-marble-floor_1150-35559.png);
-filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
-border-radius: 20px;
-}
-
-.img3{
-    position: absolute;
-width: 385px;
-height: 247.97px;
-left: 930px;
-top: 258.03px;
-
-background: url(top-view-bay-leaves-with-pepper.jpg);
-filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
-border-radius: 20px;
-}
-.img4{
-    position: absolute;
-width: 383px;
-height: 247.82px;
-left: 130px;
-top: 543.97px;
-
-background: url(top-view-green-greenies-fresh-ripe-brown-green-salad-leaf_140725-19015.jpg);
-filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
-border-radius: 20px;
-}
-
-.img5{
-    position: absolute;
-width: 380.17px;
-height: 247.38px;
-left: 530px;
-top: 544.62px;
-
-background: url(basil-hairy-basil-thyme-herbal-garden_7636-1954.png);
-filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
-border-radius: 20px;
-}
-
-.img6{
-    position: absolute;
-width: 382.17px;
-height: 244.46px;
-left: 930.83px;
-top: 545.6px;
-
-background: url(dried-saffron-spices-saffron-flower-wooden-plate-wooden-table-stamens-are-used-cooking_347372-1553.png);
-filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
-border-radius: 20px;
+.img-area{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .b1{
