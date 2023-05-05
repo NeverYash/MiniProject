@@ -104,9 +104,17 @@ header{
         margin-bottom: 12px;
         
     }
+   
 
 }
+@media only screen and (max-width: 300px){
+    .greenimg{
+        position: absolute;
+        width: max-content;
+        padding: 0;
+    }
 
+}
 
 .greenimg{
     position: absolute;
@@ -137,24 +145,24 @@ text-shadow: 9px 9px 10px #000000;
 }
 
 .img-area{
-    position: relative;
-    top: 190px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    align-content: stretch;   
-    padding-inline-start: 20px; 
+    justify-content: flex-end;
+    align-content: center;
     position:absolute;
-    top:190px;
+    top:185px;
+    padding-left:30px;
   
 }
 .single-img{
-    padding: 0px 25px 10px;
+    padding: 0px 25px 25px;
+    
 }
-img.hover{
-    opacity: 5;
+.hell:hover{
+    opacity: .5;
+    color: #55A630;
     transition: .9s;
 }
 .b1{
