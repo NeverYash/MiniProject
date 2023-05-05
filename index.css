@@ -154,7 +154,7 @@ text-shadow: 9px 9px 10px #000000;
     gap: 0.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
-    position: relative;
+    position: absolute;
     top: 185px; 
     padding-left: 100px;
 }
