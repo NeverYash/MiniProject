@@ -154,11 +154,11 @@ text-shadow: 9px 9px 10px #000000;
     gap: 0.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
-    position: absolute;
+    position: relative;
     top: 185px; 
     padding-left: 50px;
 }
-img:hover{
+.hell:hover{
     opacity: .50;
     transition:8sec
 }
