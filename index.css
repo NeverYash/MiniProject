@@ -1,205 +1,163 @@
-*{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    font-family: 'Lexend Tera';
-    font-style: normal;
-    box-sizing: border-box;
-    align-items: center;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Lexend Tera";
+  font-style: normal;
+  box-sizing: border-box;
+  align-items: center;
 }
-.humburger{
-    display: none;
+.humburger {
+  display: none;
 }
-header{
-    width: 100%;
-    height: 60px;
-    padding: 0 100px;
-    background: #FFFFFF;
-    position: absolute;
-    top: 135px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+header {
+  width: 100%;
+  height: 60px;
+  padding: 0 100px;
+  background: #fdfdfd;
+  position: absolute;
+  top: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
-.nav-bar ul{
-    display: flex;
-    
+.nav-bar ul {
+  display: flex;
 }
-.nav-bar ul li a{
+.nav-bar ul li a {
+  display: block;
+  color: black;
+  font-size: 20px;
+  padding: 10px 25px;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+.nav-bar ul li a:hover {
+  color: #fff;
+  background: greenyellow;
+}
+.nav-bar ul li a.active {
+  color: #fff;
+  background: greenyellow;
+}
+@media only screen and (max-width: 1320px) {
+  header {
+    padding: 50px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  header {
+    padding: 30px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .humburger {
     display: block;
-    color: black;
-    font-size: 20px;
-    padding: 10px 25px;
-    transition: 0.2s;
-    margin: 0 5px;
-    
-}
-.nav-bar ul li a:hover{
-    color: #fff;
-    background:greenyellow;
-}
-.nav-bar ul li a.active{
-    color: #fff;
-    background:greenyellow;
-}
-@media only screen and (max-width: 1320px){
-    header{
-        padding:50px;
-    }
-}
-@media only screen and (max-width: 1100px){
-    header{
-        padding:30px;
-    }
-}
-@media only screen and (max-width: 900px){
-    .humburger{
-        display: block;
-        cursor: pointer;
-        position: relative;
-        right: 140px;
-    }
-    .humburger .line{
-        width: 25px;
-        height: 3px;
-        background: black;
-        margin: 2px;
-        
-        position: sticky;
-        
-    
-        
-    }
+    cursor: pointer;
+    position: relative;
+    right: 140px;
+  }
+  .humburger .line {
+    width: 25px;
+    height: 3px;
+    background: black;
+    margin: 2px;
 
-    .nav-bar{
+    position: sticky;
+  }
+
+  .nav-bar {
     height: 0px;
     position: absolute;
     top: 80px;
-    
+
     left: 0;
     right: 0;
     width: 100vw;
     background: #ffffff;
-    transition: .2s;
+    transition: 0.2s;
     overflow: hidden;
-
-
-    }
-    .nav-bar.active{
-        height: 450px;
-    }
-    .nav-bar ul{
-        display: block;
-        width: fit-content;
-        margin: 80px auto 0 auto;
-        text-align: center;
-        transition: 0.5s;
-        opacity: 0;
-    }
-    .nav-bar.active ul{
-        opacity: 1;
-    }
-    .nav-bar ul li a{
-        margin-bottom: 12px;
-        
-    }
-   
-
+  }
+  .nav-bar.active {
+    height: 450px;
+  }
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .nav-bar.active ul {
+    opacity: 1;
+  }
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
 }
-@media only screen and (max-width: 300px){
-    .greenimg{
-        position: absolute;
-        width: max-content;
-        padding: 0;
-    }
-    .hell{
-        width: 100%;
-        height: auto;
-        padding-right:30px;
-    }
-
-}
-
-.greenimg{
+@media only screen and (max-width: 300px) {
+  .greenimg {
     position: absolute;
-width: 100%;
-height: 134px;
-left: 0px;
-top: 0px;
-
-background: url(leaves-g45c75c55e_1920.jpg);
-}
-.textE{
-    position: absolute;
-width: 388px;
-height: 2px;
-left: calc(50% - 388px/2);
-top: 30px;
-
-font-family: 'Lexend Tera';
-font-style: normal;
-font-weight: 400;
-font-size: 48px;
-line-height: 80px;
-text-align: center;
-
-color: #FFFF3F;
-
-text-shadow: 9px 9px 10px #000000;
+    width: max-content;
+    padding: 0;
+  }
 }
 
-.grid{
-    width: 80%;
-    gap: 0.01rem;
-    display: grid;
-    grid-template-columns: repeat(3,minmax(360px,0.1fr));
-    position: relative;
-    top: 185px; 
-    padding-left: 160px;
-}
-.hell:hover{
-    opacity: .50;
-    transition:8sec
-}
-.hell{
-    width: auto;
-    height: 80%
-}
-body{
-    display: flex;
+.greenimg {
+  position: absolute;
+  width: 100%;
+  height: 134px;
+  left: 0px;
+  top: 0px;
 
+  background: url(leaves-g45c75c55e_1920.jpg);
 }
-.b1{
-    position: absolute;
-width: 263px;
-height: 51px;
-left: 588px;
-top: 838px;
+.textE {
+  position: absolute;
+  width: 388px;
+  height: 2px;
+  left: calc(50% - 388px / 2);
+  top: 30px;
 
-background: #55A630;
-border-radius: 10px;
+  font-family: "Lexend Tera";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 80px;
+  text-align: center;
+
+  color: #ffff3f;
+
+  text-shadow: 9px 9px 10px #000000;
 }
-.b11{
-    position: absolute;
-width: 33px;
-height: 38px;
-left: 795px;
-top: 845px;
+
+.grid {
+  width: 80%;
+  gap: 0.01rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(350px, 1fr));
+  margin: 0px;
 }
-.b111{
-    position: absolute;
-width: 166px;
-height: 22px;
-left: 610px;
-top: 839px;
+.hell:hover {
+  opacity: 0.5;
+  transition: 8sec;
+}
+.hell {
+  width: auto;
+  height: 80%;
+}
+body {
+  display: flex;
+}
 
-font-family: 'Lexend Tera';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 20px;
-
-color: #FFFFFF;
-
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 160px;
+  position: absolute;
+  margin: 0px;
+  padding-left: 55px;
 }
