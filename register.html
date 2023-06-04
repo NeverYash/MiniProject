@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="register.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@500&display=swap" rel="stylesheet">
+        <title>E_Herbs</title>
+        <style>
+
+            
+        </style>
+    </head>
+    <body>
+        <img class="greenimg" src="https://i.postimg.cc/Fssf71hZ/leaves-g45c75c55e-1920-1-2.png" alt="">
+    <div class="textE">
+        <p>E-HERBS</p>
+    </div>
+    <header>
+        <div class="humburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="register.html">REGISTER</a></li>
+            <li><a href="Seller.html">SELLER</a></li>
+            <li><a href="search.html">SEARCH</a></li>
+            <li><a href="#">FEEDBACK</a></li>
+            <li><a href="#">ABOUT</a></li>
+        </ul>
+    </nav>
+</header>
+<script> 
+    humburger =  document.querySelector(".humburger");
+    humburger.onclick = function(){
+        navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+    }
+    img =document.querySelector(".img")
+</script>
+        <div>
+        <h1>REGISTER</h1>
+        Name:*<br/><input type="text" name="name" style="width: 200px; height: 25px; border: 2px solid rgb(58, 185, 235); "><br/><br/>
+        Email:*<br/><input type="text" name="email" style="width: 200px; height: 25px; border: 2px solid rgb(58, 185, 235); "><br/><br/>
+        Phone:*<br/><input type="text" name="phone" style="width: 200px; height: 25px; border: 2px solid rgb(58, 185, 235); "><br/><br/>
+        Country:*<br/><input type="text" name="country" style="width: 200px; height: 25px; border: 2px solid rgb(58, 185, 235); "><br/><br/>      
+        Password:*<br/><input type="password" name="password" style="width: 200px; height: 25px; border: 2px solid rgb(58, 185, 235);"><br/><br/>
+        Confirm Password:*<br/><input type="password" name="password" style="width: 200px; height: 25px; border: 2px solid rgb(58, 185, 235);"><br/><br/>
+        <button type="button" name="button">SIGNUP</button>
+        </div>
+    </body>
+</html>

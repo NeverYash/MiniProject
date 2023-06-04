@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="search.css">
+        <title>E-Herbs</title>
+    </head>
+    <body>
+        <img class="greenimg" src="https://i.postimg.cc/Fssf71hZ/leaves-g45c75c55e-1920-1-2.png" alt="">
+    <div class="textE">
+        <p>E-HERBS</p>
+    </div>
+    <header>
+        <div class="humburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="register.html">REGISTER</a></li>
+            <li><a href="Seller.html">SELLER</a></li>
+            <li><a href="search.html">SEARCH</a></li>
+            <li><a href="#">FEEDBACK</a></li>
+            <li><a href="#">ABOUT</a></li>
+        </ul>
+    </nav>
+</header>
+<script> 
+    humburger =  document.querySelector(".humburger");
+    humburger.onclick = function(){
+        navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+    }
+    img =document.querySelector(".img")
+</script>
+        <div>
+        
+            <input name="Disease" list="Diseases" placeholder="Enter/select Disease">
+            <datalist id="Diseases">
+                <option value="Diabetes" ></option>
+                <option value="BP" ></option>
+                <option value="Cold" ></option>
+                <option value="Cough" ></option>
+                <option value="Fever" ></option>
+                <option value="Headache" ></option>
+                
+            </datalist>
+
+        </div>
+        
+        
+            <marquee class="marquee" width="100%" direction="right" behavior="scroll" hieght="100px">UnderMaintenance     </marquee>
+        
+    </body>
+</html>
