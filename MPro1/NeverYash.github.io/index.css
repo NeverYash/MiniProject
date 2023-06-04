@@ -1,0 +1,240 @@
+.greenimg{
+    position: absolute;
+width: 100%;
+height: 134px;
+left: 0px;
+top: 0px;
+
+background: url(leaves-g45c75c55e_1920.jpg);
+}
+.textE{
+    position: absolute;
+width: 388px;
+height: 2px;
+left: calc(50% - 388px/2);
+top: -21px;
+
+font-family: 'Lexend Tera';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 80px;
+text-align: center;
+
+color: #FFFF3F;
+
+text-shadow: 9px 9px 10px #000000;
+}
+.navbar{
+    position: relative;
+    top: 126px;
+    padding:-1;
+}
+.navbar ul{
+    list-style: none;
+    background:#ffffff;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.navbar li{
+    display: inline-block;
+}
+.navbar a{
+    font-family: 'Lexend Tera';
+font-style: normal;
+font-weight: 400;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    width: 150px;
+    display: block;
+    padding: 15px 10px;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.navbar a:hover{
+    background: #80B918;
+    ;
+}
+.rec1{
+    position: absolute;
+width: 100%;
+height: 729px;
+left: 0px;
+top: 185px;
+
+background: conic-gradient(from -14.38deg at 50% 49.93%, #A5FF00 -34.15deg, #FBFF14 194.06deg, #A5FF00 325.85deg, #FBFF14 554.06deg);
+}
+.img1{
+    position: absolute;
+    width: 381px;
+    height: 247px;
+    left: 130px;
+    top: 259px;
+    padding: 0;
+    background: url(mint-g83668f821_1920.jpg);
+    filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+}
+.bg1{
+    position: absolute;
+    width: 383px;
+    height: 323px;
+    left: 136px;
+    top: 192px;
+    padding: 0;
+    background: url(—Pngtree—black gradient vertical gradient element_5441580.png);
+    border-radius: 20px;
+}
+.img2{
+    position: absolute;
+width: 381px;
+height: 247.26px;
+left: 530px;
+top: 257px;
+
+background: url(rosemary-plants-place-white-marble-floor_1150-35559.png);
+filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
+border-radius: 20px;
+}
+.bg2{
+    position: absolute;
+width: 381px;
+height: 348px;
+left: 537.25px;
+top: 167px;
+
+background: url(—Pngtree—black gradient vertical gradient element_5441580.png);
+border-radius: 20px;
+}
+.img3{
+    position: absolute;
+width: 385px;
+height: 247.97px;
+left: 930px;
+top: 258.03px;
+
+background: url(top-view-bay-leaves-with-pepper.jpg);
+filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
+border-radius: 20px;
+}
+.bg3{
+    position: absolute;
+    width: 385px;
+    height: 349px;
+    left: 935px;
+    top: 165px;
+    
+    background: url(—Pngtree—black gradient vertical gradient element_5441580.png);
+    border-radius: 20px;
+}
+.img4{
+    position: absolute;
+width: 383px;
+height: 247.82px;
+left: 130px;
+top: 543.97px;
+
+background: url(top-view-green-greenies-fresh-ripe-brown-green-salad-leaf_140725-19015.jpg);
+filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
+border-radius: 20px;
+}
+.bg4{
+    position: absolute;
+width: 383px;
+height: 348.79px;
+left: 137px;
+top: 453px;
+
+background: url(—Pngtree—black gradient vertical gradient element_5441580.png);
+border-radius: 20px;
+}
+.img5{
+    position: absolute;
+width: 380.17px;
+height: 247.38px;
+left: 530px;
+top: 544.62px;
+
+background: url(basil-hairy-basil-thyme-herbal-garden_7636-1954.png);
+filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
+border-radius: 20px;
+}
+.bg5{
+    position: absolute;
+    width: 381px;
+    height: 348.17px;
+    left: 537px;
+    top: 453px;
+    
+    background: url(—Pngtree—black gradient vertical gradient element_5441580.png);
+    border-radius: 20px;
+}
+.img6{
+    position: absolute;
+width: 382.17px;
+height: 244.46px;
+left: 930.83px;
+top: 545.6px;
+
+background: url(dried-saffron-spices-saffron-flower-wooden-plate-wooden-table-stamens-are-used-cooking_347372-1553.png);
+filter: drop-shadow(9px 7px 16px rgba(0, 0, 0, 0.25));
+border-radius: 20px;
+}
+.bg6{
+    position: absolute;
+width: 383px;
+height: 344.06px;
+left: 938px;
+top: 455px;
+
+background: url(—Pngtree—black gradient vertical gradient element_5441580.png);
+border-radius: 20px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+}
+.flex-container > div {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+.b1{
+    position: absolute;
+width: 263px;
+height: 51px;
+left: 588px;
+top: 838px;
+
+background: #55A630;
+border-radius: 10px;
+}
+.b11{
+    position: absolute;
+width: 33px;
+height: 38px;
+left: 795px;
+top: 845px;
+}
+.b111{
+    position: absolute;
+width: 166px;
+height: 22px;
+left: 610px;
+top: 839px;
+
+font-family: 'Lexend Tera';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #FFFFFF;
+
+}
