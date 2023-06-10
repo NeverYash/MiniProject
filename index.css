@@ -145,8 +145,8 @@ header {
   transition: 8sec;
 }
 .hell {
-  width: auto;
-  height: 80%;
+/*  width: auto; */
+/*   height: 80%; */
 }
 body {
   display: flex;
