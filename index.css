@@ -8,8 +8,8 @@
   box-sizing: border-box;
   align-items: center;
 }
-.humburger {
-  display: none;
+.greenimg{
+  width: 100%;
 }
 header {
   width: 100%;
@@ -41,79 +41,7 @@ header {
   color: #fff;
   background: greenyellow;
 }
-@media only screen and (max-width: 1320px) {
-  header {
-    padding: 50px;
-  }
-}
-@media only screen and (max-width: 1100px) {
-  header {
-    padding: 30px;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .humburger {
-    display: block;
-    cursor: pointer;
-    position: relative;
-    right: 140px;
-  }
-  .humburger .line {
-    width: 25px;
-    height: 3px;
-    background: black;
-    margin: 2px;
 
-    position: sticky;
-  }
-
-  .nav-bar {
-    height: 0px;
-    position: absolute;
-    top: 85px;
-
-    left: 0;
-    right: 0;
-    width: 100vw;
-    background: #ffffff;
-    transition: 0.2s;
-    overflow: hidden;
-  }
-  .nav-bar.active {
-    height: 450px;
-  }
-  .nav-bar ul {
-    display: block;
-    width: fit-content;
-    margin: 80px auto 0 auto;
-    text-align: center;
-    transition: 0.5s;
-    opacity: 0;
-  }
-  .nav-bar.active ul {
-    opacity: 1;
-  }
-  .nav-bar ul li a {
-    margin-bottom: 12px;
-  }
-}
-@media only screen and (max-width: 300px) {
-  .greenimg {
-    position: absolute;
-    width: max-content;
-    padding: 0;
-  }
-}
-
-.greenimg {
-  position: absolute;
-  width: 100%;
-  height: 134px;
-  left: 0px;
-  top: 0px;
-
-  background: url(leaves-g45c75c55e_1920.jpg);
-}
 .textE {
   position: absolute;
   width: 388px;
@@ -135,10 +63,10 @@ header {
 
 .grid {
   width: 80%;
-  gap: 0.01rem;
+  gap: 3rem;
   display: grid;
-  grid-template-columns: repeat(3, minmax(350px, 1fr));
-  margin: 0px;
+  grid-template-columns: repeat(3, minmax(350px, 2fr));
+  margin: 1px;
 }
 .hell:hover {
   opacity: 0.5;
@@ -148,9 +76,7 @@ header {
 /*  width: auto; */
 /*   height: 80%; */
 }
-body {
-  display: flex;
-}
+
 
 .container {
   display: flex;
@@ -158,21 +84,23 @@ body {
   align-items: center;
   top: 160px;
   position: absolute;
-  margin: 0px;
+  margin-left: -50px;
+  margin-top: 25px;
 }
 .button1{
-  position: absolute;
-  top: 700px;
+  position:absolute;
+  bottom:-220px;
   left: 600px;
   font-family:"Lexend Tera";
   padding: 9px;
-  margin: 10px,10px ;
+  margin: 10px,10px;
   box-shadow: 0 0 5px greenyellow,
   0 0 25px greenyellow;
   color: black;
   background: greenyellow;
   border: #fff;
-}
+
+} 
 .button1:hover{
   box-shadow: 0 0 5px greenyellow,
   0 0 25px greenyellow, 0 0 50px greenyellow,
@@ -185,7 +113,7 @@ body {
 width: 100%;
 height: 478px;
 left: -2px;
-top: 730px;
+bottom: -730px;
 
 background: url(abstract-green-smooth-wave-lines_1017-24872.png);
 mix-blend-mode: multiply;
@@ -452,4 +380,11 @@ font-family: 'Lexend Tera';
 font-style: normal;
 font-size: 15px;
 line-height: 25px;
+}
+.register-bar{
+  padding-top: 500px;
+}
+.form{
+  position: absolute;
+  top:  71px;
 }
