@@ -1,57 +1,147 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="search.css">
-        <title>E-Herbs</title>
-    </head>
-    <body>
-        <img class="greenimg" src="https://i.postimg.cc/Fssf71hZ/leaves-g45c75c55e-1920-1-2.png" alt="">
-    <div class="textE">
-        <p>E-HERBS</p>
-    </div>
-    <header>
-        <div class="humburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-    <nav class="nav-bar">
-        <ul>
-            <li><a href="index.html" class="active">HOME</a></li>
-            <li><a href="register.html">REGISTER</a></li>
-            <li><a href="Seller.html">SELLER</a></li>
-            <li><a href="search.html">SEARCH</a></li>
-            <li><a href="#">FEEDBACK</a></li>
-            <li><a href="#">ABOUT</a></li>
-        </ul>
-    </nav>
-</header>
-<script> 
-    humburger =  document.querySelector(".humburger");
-    humburger.onclick = function(){
-        navBar = document.querySelector(".nav-bar");
-        navBar.classList.toggle("active");
-    }
-    img =document.querySelector(".img")
-</script>
-        <div>
-        
-            <input name="Disease" list="Diseases" placeholder="Enter/select Disease">
-            <datalist id="Diseases">
-                <option value="Diabetes" ></option>
-                <option value="BP" ></option>
-                <option value="Cold" ></option>
-                <option value="Cough" ></option>
-                <option value="Fever" ></option>
-                <option value="Headache" ></option>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herb Search</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include custom CSS -->
+    <style>
+        .herb-card {
+            margin: 20px;
+        }
+        .herb-card .card-body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Herb Search</h1>
+        <div class="input-group mt-3">
+            <select class="form-control" id="diseaseSelect">
+                <option value="">Select a disease</option>
+                <option value="Flu">Flu</option>
+                <option value="Headache">Headache</option>
+                <option value="Cold">Cold</option>
+            </select>
+            <div class="input-group-append">
+                <button class="btn btn-primary" onclick="searchHerbs()">Search</button>
                 
-            </datalist>
 
+            </div>
         </div>
+        <div class="row mt-3" id="results"></div>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Sample herb data organized by diseases
+        // Sample herb data organized by diseases
+const herbsByDisease = {
+    Flu: [
+        {
+            name: "Echinacea",
+            price: 0.10,
+            description: "Echinacea is a powerful immune-boosting herb that can help reduce the duration of cold and flu symptoms. " +
+                "Directions for use: Take 1-2 capsules daily during the cold and flu season. " +
+                "Advantages: Boosts the immune system, reduces symptoms. " +
+                "Disadvantages: May cause allergic reactions in some individuals.",
+            availableItems: 100
+        },
+        {
+            name: "Elderberry",
+            price: 0.11,
+            description: "Elderberry is known for its antiviral properties and can help alleviate cold and flu symptoms. " +
+                "Directions for use: Take 1 tablespoon of elderberry syrup daily when feeling unwell. " +
+                "Advantages: Fights cold and flu viruses. " +
+                "Disadvantages: May cause digestive discomfort in some cases.",
+            availableItems: 120
+        },
+    ],
+    Headache: [
+        {
+            name: "Ginger",
+            price: 0.12,
+            description: "Ginger is a natural anti-inflammatory herb that can help relieve headaches and nausea. " +
+                "Directions for use: Brew ginger tea and drink when experiencing a headache. " +
+                "Advantages: Relieves nausea and inflammation. " +
+                "Disadvantages: Excessive consumption may lead to heartburn.",
+            availableItems: 50
+        },
+        {
+            name: "Peppermint",
+            price: 0.13,
+            description: "Peppermint is known for its soothing properties and can help alleviate tension headaches. " +
+                "Directions for use: Apply peppermint essential oil to the temples or inhale its aroma. " +
+                "Advantages: Soothes headaches and digestive issues. " +
+                "Disadvantages: May cause skin irritation if applied directly.",
+            availableItems: 75
+        },
+    ],
+    Cold: [
+        {
+            name: "Elderberry",
+            price: 0.13,
+            description: "Elderberry is known for its antiviral properties and can help alleviate cold and flu symptoms. " +
+                "Directions for use: Take 1 tablespoon of elderberry syrup daily when feeling unwell. " +
+                "Advantages: Fights cold and flu viruses. " +
+                "Disadvantages: May cause digestive discomfort in some cases.",
+            availableItems: 120
+        },
+        {
+            name: "Garlic",
+            price: 0.10,
+            description: "Garlic has antibacterial and antiviral properties and can help boost the immune system. " +
+                "Directions for use: Include fresh garlic in your diet or take garlic supplements. " +
+                "Advantages: Supports the immune system. " +
+                "Disadvantages: Strong garlic odor.",
+            availableItems: 200
+        },
+    ],
+};
+
         
-        
-            <marquee class="marquee" width="100%" direction="right" behavior="scroll" hieght="100px">UnderMaintenance     </marquee>
-        
-    </body>
+
+       // Function to search for herbs based on selected disease
+function searchHerbs() {
+    const selectedDisease = document.getElementById("diseaseSelect").value;
+    const resultsContainer = document.getElementById("results");
+    resultsContainer.innerHTML = "";
+
+    if (selectedDisease && herbsByDisease[selectedDisease]) {
+        const herbs = herbsByDisease[selectedDisease];
+        herbs.forEach(herb => {
+            const card = document.createElement("div");
+            card.className = "col-md-4 herb-card";
+            const priceInRupees = (herb.price * 75).toFixed(2); // Convert price to rupees
+            card.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">${herb.name}</h5>
+                        <p class="card-text">Price: ₹${priceInRupees}</p> <!-- Display price in rupees -->
+                        <p class="card-text">Description: ${herb.description}</p>
+                        <p class="card-text">Available Items: ${herb.availableItems}</p>
+                        <button class="btn btn-success" onclick="addToCart('${herb.name}')">Add to Cart</button>
+                    </div>
+                </div>
+            `;
+            resultsContainer.appendChild(card);
+        });
+    }
+}
+
+        // Function to add a herb to the cart (in-memory cart, not persistent)
+        const cart = [];
+        function addToCart(herbName) {
+            cart.push(herbName);
+            alert(`Added ${herbName} to the cart.`);
+        }
+    </script>
+</body>
 </html>
