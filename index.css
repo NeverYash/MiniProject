@@ -194,10 +194,10 @@ label{
 }
 .button2{
   position:absolute;
-  width: 100px;
+  width: 200px;
   text-align: center;
-  height: 30px;
-  left: 1071px;
+  height: 50px;
+  left: 750px;
   top: 1000px;
   background: greenyellow;
   border: green;
