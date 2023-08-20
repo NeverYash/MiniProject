@@ -1,59 +1,68 @@
-<DOCTYPE html>
-    <html>
-        <head>
-            <title>E-Hearbs</title>
-            <link rel="stylesheet" href="Seller.css">
-            <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@500&display=swap" rel="stylesheet">
-
-            <style>
-                div {
-                    margin: 120px;                        
-                }
-                h5 {
-                    font-family: Georgia, 'Times New Roman', Times, serif;
-                }
-                button:hover {
-                    background-color: rgb(58, 185, 235);
-                }
-
-            </style>
-        </head>
-        <body>
-            <img class="greenimg" src="https://i.postimg.cc/Fssf71hZ/leaves-g45c75c55e-1920-1-2.png" alt="">
-    <div class="textE">
-        <p>E-HERBS</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Login</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include custom CSS -->
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Seller Login</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="sellername">Sellername:</label>
+                <input type="text" class="form-control" id="sellername" name="sellername" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        <div id="loginMessage" class="mt-3 text-center"></div>
     </div>
-    <header>
-        <div class="humburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-    <nav class="nav-bar">
-        <ul>
-            <li><a href="index.html" class="active">HOME</a></li>
-            <li><a href="register.html">REGISTER</a></li>
-            <li><a href="Seller.html">SELLER</a></li>
-            <li><a href="search.html">SEARCH</a></li>
-            <li><a href="#">FEEDBACK</a></li>
-            <li><a href="#">ABOUT</a></li>
-        </ul>
-    </nav>
-</header>
-<script> 
-    humburger =  document.querySelector(".humburger");
-    humburger.onclick = function(){
-        navBar = document.querySelector(".nav-bar");
-        navBar.classList.toggle("active");
-    }
-    img =document.querySelector(".img")
-</script>
-            <div>
-            <h1 >SELLER LOGIN</h1>
-            Sellername or email:*<br/><input type="text" name="name" style="width: 200px; height: 30px; border: 2px solid rgb(58, 185, 235); "><br/><br/>
-            Password:*<br/><input type="password" name="password" style="width: 200px; height: 30px; border: 2px solid rgb(58, 185, 235);"><br/><br/>
-            <button type="button" name="button" >LOGIN</button>
-            <h5 style="color: rgb(58, 185, 235);"><u>Forget password?</u></h5>
-        </div>
-        </body>
-    </html>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript to handle the form submission
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get the form data
+            const formData = new FormData(event.target);
+
+            // Get sellername and password from the form
+            const sellername = formData.get("sellername");
+            const password = formData.get("password");
+
+            // Check if sellername and password match allowed values
+            if ((sellername === "rishi" && password === "rishi") || (sellername === "yash" && password === "yash")) {
+                document.getElementById("loginMessage").innerHTML = "<div class='alert alert-success'>Login successful!</div>";
+                // You can redirect the user to a dashboard or other pages here.
+            } else {
+                document.getElementById("loginMessage").innerHTML = "<div class='alert alert-danger'>Login failed. Please check your credentials.</div>";
+            }
+        });
+    </script>
+</body>
+</html>
