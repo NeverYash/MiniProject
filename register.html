@@ -1,73 +1,56 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Registration Page</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="row col-md-6 col-md-offset-3">
-        <div class="panel panel-primary">
-          <div class="panel-heading text-center">
-            <h1>Registration Form</h1>
-          </div>
-          <div class="panel-body">
-            <form action="connect.php" method="post">
-              <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="Name"
-                  name="Name"
-                />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="email"
-                  name="email"
-                />
-              <div class="form-group">
-                <label for="number">Number</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="number"
-                  name="number"
-                />
-              </div>
-              <div class="form-group">
-                <label for="country">Country</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="country"
-                  name="country"
-                />
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  name="password"
-                />
-              </div>
-              <input type="submit" class="btn btn-primary" />
-            </form>
-          </div>
-          <div class="panel-footer text-right">
-          </div>
-        </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .registration-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+    }
+    .registration-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container registration-container">
+    <h2>Registration Form</h2>
+    <form action="register.php" method="post">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" required>
       </div>
-    </div>
-   
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Register</button>
+      <center><a href="login.html"><h4>or LOGIN</h4></a></center>
+    </form>
   </div>
-  
-</div>
-  </body>
+</body>
 </html>
+
