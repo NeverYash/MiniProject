@@ -25,11 +25,21 @@
                 <option value="Flu">Flu</option>
                 <option value="Headache">Headache</option>
                 <option value="Cold">Cold</option>
+                <option value="Allergies">Allergies</option>
+                <option value="Insomnia">Insomnia</option>
+                <option value="Stress">Stress</option>
+                <option value="DigestiveIssues">Digestive Issues</option>
+                <option value="Arthritis">Arthritis</option>
+                <!-- Add more diseases here -->
+                <option value="Hypertension">Hypertension</option>
+                <option value="Diabetes">Diabetes</option>
+                <option value="Asthma">Asthma</option>
+                <option value="Migraine">Migraine</option>
+                <option value="Anxiety">Anxiety</option>
+                <option value="SkinConditions">Skin Conditions</option>
             </select>
             <div class="input-group-append">
                 <button class="btn btn-primary" onclick="searchHerbs()">Search</button>
-                
-
             </div>
         </div>
         <div class="row mt-3" id="results"></div>
@@ -42,99 +52,232 @@
 
     <script>
         // Sample herb data organized by diseases
-        // Sample herb data organized by diseases
-const herbsByDisease = {
-    Flu: [
-        {
-            name: "Echinacea",
-            price: 0.10,
-            description: "Echinacea is a powerful immune-boosting herb that can help reduce the duration of cold and flu symptoms. " +
-                "Directions for use: Take 1-2 capsules daily during the cold and flu season. " +
-                "Advantages: Boosts the immune system, reduces symptoms. " +
-                "Disadvantages: May cause allergic reactions in some individuals.",
-            availableItems: 100
-        },
-        {
-            name: "Elderberry",
-            price: 0.11,
-            description: "Elderberry is known for its antiviral properties and can help alleviate cold and flu symptoms. " +
-                "Directions for use: Take 1 tablespoon of elderberry syrup daily when feeling unwell. " +
-                "Advantages: Fights cold and flu viruses. " +
-                "Disadvantages: May cause digestive discomfort in some cases.",
-            availableItems: 120
-        },
-    ],
-    Headache: [
-        {
-            name: "Ginger",
-            price: 0.12,
-            description: "Ginger is a natural anti-inflammatory herb that can help relieve headaches and nausea. " +
-                "Directions for use: Brew ginger tea and drink when experiencing a headache. " +
-                "Advantages: Relieves nausea and inflammation. " +
-                "Disadvantages: Excessive consumption may lead to heartburn.",
-            availableItems: 50
-        },
-        {
-            name: "Peppermint",
-            price: 0.13,
-            description: "Peppermint is known for its soothing properties and can help alleviate tension headaches. " +
-                "Directions for use: Apply peppermint essential oil to the temples or inhale its aroma. " +
-                "Advantages: Soothes headaches and digestive issues. " +
-                "Disadvantages: May cause skin irritation if applied directly.",
-            availableItems: 75
-        },
-    ],
-    Cold: [
-        {
-            name: "Elderberry",
-            price: 0.13,
-            description: "Elderberry is known for its antiviral properties and can help alleviate cold and flu symptoms. " +
-                "Directions for use: Take 1 tablespoon of elderberry syrup daily when feeling unwell. " +
-                "Advantages: Fights cold and flu viruses. " +
-                "Disadvantages: May cause digestive discomfort in some cases.",
-            availableItems: 120
-        },
-        {
-            name: "Garlic",
-            price: 0.10,
-            description: "Garlic has antibacterial and antiviral properties and can help boost the immune system. " +
-                "Directions for use: Include fresh garlic in your diet or take garlic supplements. " +
-                "Advantages: Supports the immune system. " +
-                "Disadvantages: Strong garlic odor.",
-            availableItems: 200
-        },
-    ],
-};
+        const herbsByDisease = {
+            Flu: [
+                {
+                    name: "Echinacea",
+                    price: 0.10,
+                    description: "Echinacea is a powerful immune-boosting herb that can help reduce the duration of cold and flu symptoms.",
+                    availableItems: 100
+                },
+                {
+                    name: "Elderberry",
+                    price: 0.11,
+                    description: "Elderberry is known for its antiviral properties and can help alleviate cold and flu symptoms.",
+                    availableItems: 120
+                },
+            ],
+            Headache: [
+                {
+                    name: "Ginger",
+                    price: 0.12,
+                    description: "Ginger is a natural anti-inflammatory herb that can help relieve headaches and nausea.",
+                    availableItems: 50
+                },
+                {
+                    name: "Peppermint",
+                    price: 0.13,
+                    description: "Peppermint is known for its soothing properties and can help alleviate tension headaches.",
+                    availableItems: 75
+                },
+            ],
+            Cold: [
+                {
+                    name: "Elderberry",
+                    price: 0.13,
+                    description: "Elderberry is known for its antiviral properties and can help alleviate cold and flu symptoms.",
+                    availableItems: 120
+                },
+                {
+                    name: "Garlic",
+                    price: 0.10,
+                    description: "Garlic has antibacterial and antiviral properties and can help boost the immune system.",
+                    availableItems: 200
+                },
+            ],
+            Allergies: [
+                {
+                    name: "Nettle",
+                    price: 0.09,
+                    description: "Nettle is a natural antihistamine that can help alleviate allergy symptoms.",
+                    availableItems: 90
+                },
+                {
+                    name: "Quercetin",
+                    price: 0.08,
+                    description: "Quercetin is a flavonoid known for its antiallergic properties.",
+                    availableItems: 80
+                },
+            ],
+            Insomnia: [
+                {
+                    name: "Valerian Root",
+                    price: 0.11,
+                    description: "Valerian root is a natural remedy for insomnia and sleep disorders.",
+                    availableItems: 70
+                },
+                {
+                    name: "Chamomile",
+                    price: 0.10,
+                    description: "Chamomile is known for its calming effects and can help with sleep problems.",
+                    availableItems: 60
+                },
+            ],
+            Stress: [
+                {
+                    name: "Ashwagandha",
+                    price: 0.12,
+                    description: "Ashwagandha is an adaptogenic herb that can help reduce stress and anxiety.",
+                    availableItems: 85
+                },
+                {
+                    name: "Lavender",
+                    price: 0.10,
+                    description: "Lavender is known for its relaxing aroma and stress-relieving properties.",
+                    availableItems: 75
+                },
+            ],
+            DigestiveIssues: [
+                {
+                    name: "Peppermint",
+                    price: 0.13,
+                    description: "Peppermint can soothe digestive problems like indigestion and gas.",
+                    availableItems: 100
+                },
+                {
+                    name: "Ginger",
+                    price: 0.12,
+                    description: "Ginger aids digestion and can alleviate nausea and bloating.",
+                    availableItems: 90
+                },
+            ],
+            Arthritis: [
+                {
+                    name: "Turmeric",
+                    price: 0.15,
+                    description: "Turmeric contains curcumin, which has anti-inflammatory properties and may help with arthritis pain.",
+                    availableItems: 50
+                },
+                {
+                    name: "Boswellia",
+                    price: 0.14,
+                    description: "Boswellia is an herb that may reduce inflammation and joint pain in arthritis patients.",
+                    availableItems: 40
+                },
+            ],
+            Hypertension: [
+                {
+                    name: "Hawthorn",
+                    price: 0.13,
+                    description: "Hawthorn is known for its potential to lower blood pressure and improve heart health.",
+                    availableItems: 60
+                },
+                {
+                    name: "Garlic",
+                    price: 0.11,
+                    description: "Garlic is believed to have blood pressure-lowering properties.",
+                    availableItems: 70
+                },
+            ],
+            Diabetes: [
+                {
+                    name: "Cinnamon",
+                    price: 0.09,
+                    description: "Cinnamon may help lower blood sugar levels in people with diabetes.",
+                    availableItems: 80
+                },
+                {
+                    name: "Bitter Melon",
+                    price: 0.10,
+                    description: "Bitter melon is used in traditional medicine to manage blood sugar levels.",
+                    availableItems: 90
+                },
+            ],
+            Asthma: [
+                {
+                    name: "Boswellia",
+                    price: 0.14,
+                    description: "Boswellia may help reduce inflammation and improve breathing in asthma patients.",
+                    availableItems: 50
+                },
+                {
+                    name: "Turmeric",
+                    price: 0.15,
+                    description: "Turmeric's anti-inflammatory properties may benefit asthma sufferers.",
+                    availableItems: 60
+                },
+            ],
+            Migraine: [
+                {
+                    name: "Feverfew",
+                    price: 0.12,
+                    description: "Feverfew is a traditional remedy for migraines and headaches.",
+                    availableItems: 40
+                },
+                {
+                    name: "Butterbur",
+                    price: 0.14,
+                    description: "Butterbur is used for migraine prevention and may reduce the frequency of migraines.",
+                    availableItems: 35
+                },
+            ],
+            Anxiety: [
+                {
+                    name: "Kava",
+                    price: 0.13,
+                    description: "Kava is known for its calming effects and may help reduce anxiety.",
+                    availableItems: 70
+                },
+                {
+                    name: "Passionflower",
+                    price: 0.11,
+                    description: "Passionflower is a natural remedy for anxiety and nervousness.",
+                    availableItems: 55
+                },
+            ],
+            SkinConditions: [
+                {
+                    name: "Aloe Vera",
+                    price: 0.09,
+                    description: "Aloe vera is used to soothe and heal various skin conditions, including burns and rashes.",
+                    availableItems: 75
+                },
+                {
+                    name: "Calendula",
+                    price: 0.10,
+                    description: "Calendula is known for its anti-inflammatory and skin-soothing properties.",
+                    availableItems: 65
+                },
+            ],
+        };
 
-        
+        // Function to search for herbs based on selected disease
+        function searchHerbs() {
+            const selectedDisease = document.getElementById("diseaseSelect").value;
+            const resultsContainer = document.getElementById("results");
+            resultsContainer.innerHTML = "";
 
-       // Function to search for herbs based on selected disease
-function searchHerbs() {
-    const selectedDisease = document.getElementById("diseaseSelect").value;
-    const resultsContainer = document.getElementById("results");
-    resultsContainer.innerHTML = "";
-
-    if (selectedDisease && herbsByDisease[selectedDisease]) {
-        const herbs = herbsByDisease[selectedDisease];
-        herbs.forEach(herb => {
-            const card = document.createElement("div");
-            card.className = "col-md-4 herb-card";
-            const priceInRupees = (herb.price * 75).toFixed(2); // Convert price to rupees
-            card.innerHTML = `
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">${herb.name}</h5>
-                        <p class="card-text">Price: ₹${priceInRupees}</p> <!-- Display price in rupees -->
-                        <p class="card-text">Description: ${herb.description}</p>
-                        <p class="card-text">Available Items: ${herb.availableItems}</p>
-                        <button class="btn btn-success" onclick="addToCart('${herb.name}')">Add to Cart</button>
-                    </div>
-                </div>
-            `;
-            resultsContainer.appendChild(card);
-        });
-    }
-}
+            if (selectedDisease && herbsByDisease[selectedDisease]) {
+                const herbs = herbsByDisease[selectedDisease];
+                herbs.forEach(herb => {
+                    const card = document.createElement("div");
+                    card.className = "col-md-4 herb-card";
+                    const priceInRupees = (herb.price * 75).toFixed(2); // Convert price to rupees
+                    card.innerHTML = `
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">${herb.name}</h5>
+                                <p class="card-text">Price: ₹${priceInRupees}</p> <!-- Display price in rupees -->
+                                <p class="card-text">Description: ${herb.description}</p>
+                                <p class="card-text">Available Items: ${herb.availableItems}</p>
+                                <button class="btn btn-success" onclick="addToCart('${herb.name}')">Add to Cart</button>
+                            </div>
+                        </div>
+                    `;
+                    resultsContainer.appendChild(card);
+                });
+            }
+        }
 
         // Function to add a herb to the cart (in-memory cart, not persistent)
         const cart = [];
