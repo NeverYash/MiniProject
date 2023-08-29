@@ -17,7 +17,8 @@ E Herbs offers a seamless online shopping experience for individuals interested 
 - **Responsive Design**: User-friendly and accessible design across various devices.
 
 ## Team Members
-<a href="https://github.com/NeverYash/MiniProject/graphs/contributors">
+
+  <a href="https://github.com/NeverYash/MiniProject/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=NeverYash/MiniProject" />
-</a>
+  </a>
 
