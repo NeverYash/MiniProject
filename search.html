@@ -317,9 +317,13 @@
         function addToCart(herbName) {
             cart.push(herbName);
             alert(`Added ${herbName} to the cart.`);
-            if(herbName == 'Calendula'){
-            location.href="herblist/Calendula.html";
+            switch(herbName){
+                case 'Calendula': location.href="herblist/Calendula.html";
+                break;
+                case 'Echinacea': location.href="herblist/Echinacea.html";
+                break;
             }
+            
         }
         
     </script>
