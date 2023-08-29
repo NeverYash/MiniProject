@@ -15,6 +15,7 @@ E Herbs offers a seamless online shopping experience for individuals interested 
 - **Seller Profiles**: Seller profiles highlighting their offerings and user ratings.
 - **Admin Dashboard**: A dedicated admin panel to manage herbs, users, and orders.
 - **Responsive Design**: User-friendly and accessible design across various devices.
-##Team Members
-readme: contributors
-readme: contributors -end
+
+## Team Members
+<!-- readme: contributors -start -->@yashwanth
+<!-- readme: contributors -end -->
