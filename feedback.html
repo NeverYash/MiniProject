@@ -17,10 +17,10 @@
                 <div>
                     <div class="card-body">
                         <h3 class="text-danger">Give us your feedback</h3>
-                        <form>
-                            <div class="form-group mb-3"><label class="form-label">E-mail </label><input class="form-control" type="text" name="email"></div>
-                            <div class="form-group mb-3"><label class="form-label">Subject </label><input class="form-control" type="text" name="subject"></div>
-                            <div class="form-group mb-3"><label class="form-label">Feedback </label><textarea class="form-control" name="feedback" rows="12"></textarea></div><button class="btn btn-success d-block w-100" type="submit" onclick="responce()">SUBMIT </button><button class="btn btn-danger d-block center-block w-100" type="reset">RESET </button>
+                        <form name="feedback_form">
+                            <div class="form-group mb-3"><label class="form-label">E-mail </label><input required class="form-control" type="text" id="email"></div>
+                            <div class="form-group mb-3"><label class="form-label">Subject </label><input required class="form-control" type="text" id="subject"></div> 
+                            <div class="form-group mb-3"><label class="form-label">Feedback </label><textarea required class="form-control" name="feedback" rows="12"></textarea></div><button class="btn btn-success d-block w-100" type="submit" onclick="response()">SUBMIT </button><button class="btn btn-danger d-block center-block w-100" type="reset">RESET </button>
                         </form>
                     </div>
                 </div>
@@ -28,9 +28,14 @@
         </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js">
-        function responce(){
-            alert(`feedback successfully submitted`);
-        }
+       
+    </script>
+    <script>
+        let form = document.getElementsByTagName("form")[0];
+        form.addEventListener("submit", (e) => {
+         e.preventDefault();
+         alert("Form Submitted!");
+        });
     </script>
 </body>
 
