@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herb Search</title>
     <!-- Include Bootstrap CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="search.css">
     <!-- Include custom CSS -->
     <style>
         .herb-card {
@@ -17,6 +21,35 @@
     </style>
 </head>
 <body>
+    <img class="greenimg" src="https://i.postimg.cc/Fssf71hZ/leaves-g45c75c55e-1920-1-2.png" alt="">
+    <div class="textE">
+        <p>E-HERBS</p>
+    </div>
+    <header>
+        <div class="humburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="register.html">REGISTER</a></li>
+            <li><a href="Seller.html">SELLER</a></li>
+            <li><a href="search.html"  class="active">SEARCH</a></li>
+            <li><a href="feedback.html">FEEDBACK</a></li>
+            <li><a href="aboutus.html">ABOUT</a></li>
+        </ul>
+    </nav>
+</header>
+<script> 
+    humburger =  document.querySelector(".humburger");
+    humburger.onclick = function(){
+        navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+    }
+    img =document.querySelector(".img")
+</script>
     <div class="container">
         <h1 class="mt-5">Herb Search</h1>
         <div class="input-group mt-3">

@@ -7,9 +7,109 @@
     <title>about</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Features-Minimal-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@500&display=swap" rel="stylesheet">
 </head>
-
+<style>
+    .container{
+        position: relative;
+        top: 80px;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        font-family: "Lexend Tera";
+        font-style: normal;
+        box-sizing: border-box;
+        align-items: center;
+      }
+      .greenimg{
+        width: 100%;
+      }
+      header {
+        width: 100%;
+        height: 70px;
+        padding: 0 100px;
+        background: #fdfdfd;
+        position: absolute;
+        top: 135px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .nav-bar ul {
+        display: flex;
+      }
+      .nav-bar ul li a {
+        display: block;
+        color: black;
+        font-size: 20px;
+        padding: 10px 25px;
+        transition: 0.2s;
+        margin: 0 5px;
+      }
+      .nav-bar ul li a:hover {
+        color: #fff;
+        background: greenyellow;
+      }
+      .nav-bar ul li a.active {
+        color: #fff;
+        background: greenyellow;
+      }
+      
+      .textE {
+        position: absolute;
+        width: 388px;
+        height: 2px;
+        left: calc(50% - 388px / 2);
+        top: 30px;
+      
+        font-family: "Lexend Tera";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 80px;
+        text-align: center;
+      
+        color: #ffff3f;
+      
+        text-shadow: 9px 9px 10px #000000;
+      }
+</style>
 <body>
+    <img class="greenimg" src="https://i.postimg.cc/Fssf71hZ/leaves-g45c75c55e-1920-1-2.png" alt="">
+    <div class="textE">
+        <p>E-HERBS</p>
+    </div>
+    <header>
+        <div class="humburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html" >HOME</a></li>
+            <li><a href="register.html">REGISTER</a></li>
+            <li><a href="Seller.html" >SELLER</a></li>
+            <li><a href="search.html">SEARCH</a></li>
+            <li><a href="feedback.html">FEEDBACK</a></li>
+            <li><a href="aboutus.html" class="active">ABOUT</a></li>
+        </ul>
+    </nav>
+</header>
+<script> 
+    humburger =  document.querySelector(".humburger");
+    humburger.onclick = function(){
+        navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+    }
+    img =document.querySelector(".img")
+</script>
+    <div class="container">
     <h1 style="transform: translate(19px);">About Us</h1>
     <p style="transform: translate(17px);margin-bottom: 1px;margin-right: -7px;padding-right: 34px;"><br><span style="color: rgb(55, 65, 81); background-color: rgb(247, 247, 248);">At E Herbs, we're on a mission to transform the way you experience herbs. Our online platform is the result of a shared passion for herbs, combined with a vision to provide a convenient and reliable way for herb enthusiasts to access a diverse range of fresh and dried herbs. Whether you're an avid cook, or a wellness seeker, we're here to be your trusted source for all things herbal.</span><br><br></p>
     <div class="container py-4 py-xl-5">
@@ -84,6 +184,7 @@
             </div>
         </div>
     </div>
+</div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 

@@ -4,8 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-decoration: none;
+      font-family: "Lexend Tera";
+      font-style: normal;
+      box-sizing: border-box;
+      align-items: center;
+    }
+    .greenimg{
+      width: 100%;
+    }
+    header {
+      width: 100%;
+      height: 70px;
+      padding: 0 100px;
+      background: #fdfdfd;
+      position: absolute;
+      top: 135px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .nav-bar ul {
+      display: flex;
+    }
+    .nav-bar ul li a {
+      display: block;
+      color: black;
+      font-size: 20px;
+      padding: 10px 25px;
+      transition: 0.2s;
+      margin: 0 5px;
+    }
+    .nav-bar ul li a:hover {
+      color: #fff;
+      background: greenyellow;
+    }
+    .nav-bar ul li a.active {
+      color: #fff;
+      background: greenyellow;
+    }
+    
+    .textE {
+      position: absolute;
+      width: 388px;
+      height: 2px;
+      left: calc(50% - 388px / 2);
+      top: 30px;
+    
+      font-family: "Lexend Tera";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 80px;
+      text-align: center;
+    
+      color: #ffff3f;
+    
+      text-shadow: 9px 9px 10px #000000;
+    }  
     body {
       background-color: #f8f9fa;
     }
@@ -25,9 +90,42 @@
     .form-group {
       margin-bottom: 20px;
     }
+    .registration-container{
+      position: relative;
+      top: 80px;
+    }
   </style>
 </head>
 <body>
+  <img class="greenimg" src="https://i.postimg.cc/Fssf71hZ/leaves-g45c75c55e-1920-1-2.png" alt="">
+    <div class="textE">
+        <p>E-HERBS</p>
+    </div>
+    <header>
+        <div class="humburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="register.html"  class="active">REGISTER</a></li>
+            <li><a href="Seller.html">SELLER</a></li>
+            <li><a href="search.html">SEARCH</a></li>
+            <li><a href="feedback.html"  >FEEDBACK</a></li>
+            <li><a href="aboutus.html">ABOUT</a></li>
+        </ul>
+    </nav>
+</header>
+<script> 
+    humburger =  document.querySelector(".humburger");
+    humburger.onclick = function(){
+        navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+    }
+    img =document.querySelector(".img")
+</script>
   <div class="container registration-container">
     <h2>Registration Form</h2>
     <form action="register.php" method="post">
